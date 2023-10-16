@@ -28,10 +28,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['https://zany-space-carnival-q49g7vxqj9q3x4gr-8000.app.github.dev/','localhost']
 
+INTERAL_IPS = ["127.0.0.1",]
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    "debug_toolbar",
     "pollApp",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -49,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "myProject.urls"
