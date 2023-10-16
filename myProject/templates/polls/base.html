@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+  <title>
+    {% block title %}{% endblock title %}
+  </title>
+  <link rel="stylesheet" href="{% static 'pollApp/style.css' %}" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      {% block content %}{% endblock content %}
+    </div>
+  </div>
+</body>
